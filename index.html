@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>FLAT Designer</title>
+</head>
+<body class="no-select">
+    <h1>AT-AT</h1>
+    <h2>Automata Theory - Application Tester</h2>
+    <div class="centre">
+        <button onclick="gen()" id="regex-generator" type="button">Generate New Regex</button>
+        <p id="regex"></p>
+    </div>
+    <div class="centre">
+        <canvas id="flat-canvas" width="1000" height="500" style="border:1px solid #000000;">
+        </canvas>
+    </div>
+    <div class="centre">
+        <p id="result"></p>
+        <button onclick="comp()" id="fsm-check" type="button">Check For Equivalence With Regex</button>
+    </div><br>
+    <div class="centre">
+        <input type="checkbox" id="dfa-toggle" name="dfa">
+        <label for="dfa-toggle"> Force DFA Constraint</label>
+    </div>
+    <div>
+        Controls
+        <ul>
+            <li><b>Create State:</b> Double-click empty space</li>
+            <li><b>Create Transition From Highlighted State:</b> Shift-click state to point at</li>
+            <li><b>Highlight State/Transition:</b> Single-click state/transition</li>
+            <li><b>Delete State/Transition:</b> Delete key</li>
+            <li><b>Toggle Start State:</b> Ctrl-click state</li>
+            <li><b>Toggle Accept State:</b> Double-click state</li>
+            <li><b>Label Highlighted State/Transition:</b> Type (use '\e' for ε)</li>
+        </ul>
+    </div>
+</body>
+</html>
